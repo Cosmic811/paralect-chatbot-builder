@@ -2,6 +2,10 @@
 
 Paralect **Embeddable Chatbot Builder** MVP: company documents become a grounded assistant in an owner workspace and a public website widget.
 
+Live application: https://paralect-chatbot-builder.onrender.com
+
+Public walkthrough: https://paralect-chatbot-builder.onrender.com/guide/index.html
+
 ## Implemented scope
 
 - Product landing page, pricing, onboarding and Supabase email/password authentication.
