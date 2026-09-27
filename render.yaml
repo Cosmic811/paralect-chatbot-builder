@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: paralect-chatbot-builder
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start -- --hostname 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 24.18.0
+      - key: NEXT_TELEMETRY_DISABLED
+        value: 1
+      - key: NEXT_PUBLIC_SUPABASE_URL
+        sync: false
+      - key: NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SECRET_KEY
+        sync: false
+      - key: MISTRAL_API_KEY
+        sync: false
+      - key: MISTRAL_CHAT_MODEL
+        value: ministral-14b-latest
